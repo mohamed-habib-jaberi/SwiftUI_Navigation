@@ -15,6 +15,7 @@
 		6140128B24759313001A7A7E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6140128924759313001A7A7E /* LaunchScreen.storyboard */; };
 		614012932475954B001A7A7E /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614012922475954B001A7A7E /* Book.swift */; };
 		61401295247596BB001A7A7E /* HelpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61401294247596BB001A7A7E /* HelpView.swift */; };
+		6140129724759BE0001A7A7E /* BookDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6140129624759BE0001A7A7E /* BookDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		6140128C24759313001A7A7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		614012922475954B001A7A7E /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		61401294247596BB001A7A7E /* HelpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpView.swift; sourceTree = "<group>"; };
+		6140129624759BE0001A7A7E /* BookDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				6140127E24759310001A7A7E /* AppDelegate.swift */,
 				6140128024759310001A7A7E /* SceneDelegate.swift */,
 				6140128224759310001A7A7E /* ContentView.swift */,
+				6140129624759BE0001A7A7E /* BookDetailView.swift */,
 				61401294247596BB001A7A7E /* HelpView.swift */,
 				614012922475954B001A7A7E /* Book.swift */,
 				6140128424759313001A7A7E /* Assets.xcassets */,
@@ -156,6 +159,7 @@
 				6140127F24759310001A7A7E /* AppDelegate.swift in Sources */,
 				6140128124759310001A7A7E /* SceneDelegate.swift in Sources */,
 				61401295247596BB001A7A7E /* HelpView.swift in Sources */,
+				6140129724759BE0001A7A7E /* BookDetailView.swift in Sources */,
 				6140128324759310001A7A7E /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
