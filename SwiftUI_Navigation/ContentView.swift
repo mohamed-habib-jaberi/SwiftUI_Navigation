@@ -10,6 +10,8 @@ import SwiftUI
 
 struct ContentView: View {
     
+    @State private var isPresented = false
+    
     var body: some View {
         
         NavigationView{
@@ -22,31 +24,14 @@ struct ContentView: View {
                             GeometryReader { proxy in
                                 
                                 NavigationLink(destination: BookDetailView(book: book)) {
-                                    VStack {
-                                        Text(book.title)
-                                            .fontWeight(.bold)
-                                            .font(Font.system(.headline, design: .rounded))
-                                            .minimumScaleFactor(0.75)
-                                            .padding(.top)
-                                            .multilineTextAlignment(.center)
-                                            .lineLimit(nil)
-                                            .foregroundColor(.white)
-                                        
-                                        Image(book.imageName)
-                                            .resizable()
-                                            .scaledToFit()
-                                            .padding()
-                                            .shadow(color: .gray, radius: 20)
-                                    }
-                                    .padding()
-                                    .frame(width: max(proxy.size.width - proxy.frame(in: .global).midX, proxy.size.width),
-                                           height: proxy.size.height - 50)
+                                    BookView(book: book, proxy: proxy)
                                 }
                                     
                                     
                                     
                                     
                                 .background(Image(book.imageName)
+                                .renderingMode(.original)
                                 .resizable()
                                 .scaledToFill()
                                 .opacity(1)
@@ -70,6 +55,16 @@ struct ContentView: View {
             .background(Color.black)
             .edgesIgnoringSafeArea(.bottom)
             .navigationBarTitle("RW Swift Books")
+                
+            .navigationBarItems(trailing: Button(action: {
+                self.isPresented.toggle()
+            }, label: {
+                Text("Help")
+            }))
+                
+                .sheet(isPresented: $isPresented) {
+                    HelpView()
+            }
         }
         
     }
@@ -85,3 +80,4 @@ struct ContentView_Previews: PreviewProvider {
 extension Color {
     static let myGreen = Color(red: 21/255, green: 132/255, blue: 67/255)
 }
+
